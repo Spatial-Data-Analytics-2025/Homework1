@@ -1,9 +1,9 @@
 ---
-title: "THEMATICS - tabs"
+title: "Homework 1 - tabs"
 output:
   flexdashboard::flex_dashboard:
     navbar:
-      - { icon: "fa-github", href: "https://github.com/DACSS-Spatial/The-Thematics", align: right }
+      - { icon: "fa-github", href: "https://github.com/Spatial-Data-Analytics-2025/Homework1", align: right }
 
 ---
 
@@ -22,7 +22,7 @@ Preparing the dashboard based on the instructions given in class!
 ### DDM 1
 
 ```{r}
-readRDS("plot1_a.rds")
+readRDS("plot1_a.rds")      
 ```
 
 
