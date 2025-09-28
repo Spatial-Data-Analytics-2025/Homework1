@@ -14,16 +14,10 @@ library(flexdashboard) # always
 ## Sidebar {.sidebar}
 
 
-Preparing the dashboard based on the instructions given in class!
+link to Repo - https://github.com/Spatial-Data-Analytics-2025/Homework1.git 
 
 ## Column {.tabset .tabset-fade}
 
-
-### DDM 1
-
-```{r}
-readRDS("plot1_a.rds")      
-```
 
 
 ### DDM 2
@@ -32,28 +26,15 @@ readRDS("plot1_a.rds")
 readRDS("plot1_b.rds")
 ```
 
-### PSM 1
-
-```{r}
-readRDS("plot2_a.rds")
-```
-
-### PSM 2
+### PSM 
 
 ```{r}
 readRDS("plot2_b.rds")
 ```
 
-
-### CHORO 1
+### CHORO Map
 
 ```{r}
 readRDS("plot3_a.rds")
-```
-
-### CHORO 2
-
-```{r}
-readRDS("plot3_b.rds")
 ```
 
