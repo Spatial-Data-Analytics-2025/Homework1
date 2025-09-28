@@ -42,7 +42,7 @@ ggplot() + theme_light() +
   # adjust datum 
   coord_sf(datum = st_crs(South_America)) + 
   # custom X and Y axes
-  scale_x_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
+  scale_x_continuous( breaks = seq(-16000000, -4000000, by = 1500000),labels = label_number(scale = 1/1000, suffix = " km")) +
   scale_y_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
   labs(x = "Easting", y = "Northing") #labels
 ```
@@ -56,11 +56,11 @@ plot1_a=ggplot() + theme_light() +
   geom_sf(data=South_America_mobile_ddm,
           alpha=0.1,#transparency
           shape=20,
-          size=0.5,
-          color="red")+
+          size=0.8,
+          color="purple")+
   coord_sf(datum = st_crs(South_America)) + 
   # custom X and Y axes
-  scale_x_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
+  scale_x_continuous( breaks = seq(-16000000, -4000000, by = 1500000),labels = label_number(scale = 1/1000, suffix = " km")) +
   scale_y_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
   labs(x = "Easting", y = "Northing") #labels
 
@@ -76,9 +76,9 @@ ddm_4326 <- st_transform(South_America_mobile_ddm, crs = 4326)
 leaflet() %>%
   addTiles() %>%  # base map
   addCircleMarkers(data = ddm_4326,
-                   color="red",
+                   color="purple",
                    stroke=0,
-                   radius = 0.01,
+                   radius = 0.05,
                    opacity = 0.1)
 ```
 
@@ -88,9 +88,9 @@ Almost the same:
 plot1_b=leaflet() %>%
   addProviderTiles(providers$CartoDB.Positron)  %>%  # names in english
   addCircleMarkers(data = ddm_4326,
-                   color="red",
+                   color="purple",
                    stroke=0,
-                   radius = 0.01,
+                   radius = 0.05,
                    opacity = 0.1)
 plot1_b
 ```
@@ -112,7 +112,7 @@ plot2_a=ggplot() + theme_light() +
   
   coord_sf(datum = st_crs(South_America)) + 
   # custom X and Y axes
-  scale_x_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
+  scale_x_continuous( breaks = seq(-16000000, -4000000, by = 1500000),labels = label_number(scale = 1/1000, suffix = " km")) +
   scale_y_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
   labs(x = "Easting", y = "Northing") #labels
 
@@ -147,9 +147,9 @@ plot3_a=ggplot() + theme_light() +
           aes(fill=mobiles_density_FJ5_cat))+
   coord_sf(datum = st_crs(South_America)) +
   scale_fill_brewer(direction = 1,palette = 'RdBu') + 
-  scale_x_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
+  scale_x_continuous( breaks = seq(-16000000, -4000000, by = 1500000),labels = label_number(scale = 1/1000, suffix = " km")) +
   scale_y_continuous(labels = label_number(scale = 1/1000, suffix = " km")) +
-  labs(x = "Easting", y = "Northing",fill="Pop Density")
+  labs(x = "Easting", y = "Northing",fill="Mobile Density")
   
 plot3_a
   
