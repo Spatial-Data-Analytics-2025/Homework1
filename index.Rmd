@@ -20,7 +20,7 @@ link to Repo - https://github.com/Spatial-Data-Analytics-2025/Homework1.git
 
 
 
-### DDM 2
+### DDM 
 
 ```{r}
 readRDS("plot1_b.rds")
